@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Malgun Gothic', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#start-screen, #end-screen {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#game-screen {
+    width: 100%;
+    max-width: 500px;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#board {
+    display: grid;
+    gap: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: white;
+}
+
+.color-box {
+    width: 100%;
+    padding-bottom: 100%; /* 1:1 Aspect Ratio */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.color-box:hover {
+    transform: scale(1.05);
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
